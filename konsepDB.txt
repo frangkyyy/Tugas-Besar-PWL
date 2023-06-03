@@ -1,0 +1,25 @@
+Rencana Konsep / Skema Database Perwalian menggunakan laravel
+
+Tabel: tb_User
+Kolom:
+idUser (Primary Key)
+Nama
+Password (MD5)
+Role (Mahasiswa / Prodi)
+
+
+Tabel: tb_MataKuliah
+Kolom:
+id_Matkul (Primary Key)
+NamaMatkul
+SKS
+Fakultas
+Jurusan
+MaxSiswa
+
+Tabel: Jadwal
+Kolom:
+id_Matkul (Foreign Key tb_MataKuliah)
+Hari
+Jam
+Kelas (A / B)
