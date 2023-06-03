@@ -19,6 +19,7 @@ MaxSiswa
 
 Tabel: Jadwal
 Kolom:
+idUser (Foreign Key tb_User)
 id_Matkul (Foreign Key tb_MataKuliah)
 Hari
 Jam
