@@ -2,25 +2,25 @@ Rencana Konsep / Skema Database Perwalian menggunakan laravel
 
 Tabel: tb_User
 Kolom:
-idUser (Primary Key)
-Nama
-Password (MD5)
-Role (Mahasiswa / Prodi)
+idUser (Primary Key) INT
+Nama VARCHAR
+Password VARCHAR (MD5)
+Role (Mahasiswa / Prodi) VARCHAR
 
 
 Tabel: tb_MataKuliah
 Kolom:
-id_Matkul (Primary Key)
-NamaMatkul
-SKS
-Fakultas
-Jurusan
-MaxSiswa
+id_Matkul (Primary Key) VARCHAR
+NamaMatkul VARCHAR
+SKS INT
+Fakultas VARCHAR
+Jurusan VARCHAR
+MaxSiswa INT
 
 Tabel: Jadwal
 Kolom:
-idUser (Foreign Key tb_User)
-id_Matkul (Foreign Key tb_MataKuliah)
-Hari
-Jam
-Kelas (A / B)
+idUser (Foreign Key tb_User) INT
+id_Matkul (Foreign Key tb_MataKuliah) VARCHAR
+Hari VARCHAR
+Jam DATETIME
+Kelas (A / B) VARCHAR
