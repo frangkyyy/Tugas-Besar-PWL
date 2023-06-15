@@ -68,3 +68,9 @@ php artisan serve
 ````
 
 To get into the dashboard go to /register first.
+
+
+Edit barisan ini di .env menjadi
+DB_DATABASE=Kelompok3
+DB_USERNAME=root
+DB_PASSWORD=
