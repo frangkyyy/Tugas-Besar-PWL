@@ -1,3 +1,34 @@
+Info file .env
+
+DB_DATABASE=UAS-Kelompok3
+
+DB_USERNAME=root 
+
+DB_PASSWORD=
+
+Info User untuk login
+
+Email - Password (Sebelum diproses menjadi bcrpyt) - Role
+
+2172020@mahasiswa.com - 21212 - Mahasiswa
+
+2172034@mahasiswa.com - 34043 - Mahasiswa
+
+2172036@mahasiswa.com - 36360 - Mahasiswa
+
+2172039@mahasiswa.com - 39939 - Mahasiswa
+
+72001@prodi.com - 72127 - Prodi
+
+73001@prodi.com - 73137 - Prodi
+
+2173001@mahasiswa.com - 21731 - Mahasiswa
+
+2173002@mahasiswa.com - 21732 - Mahasiswa
+
+2173003@mahasiswa.com - 21733 - Mahasiswa
+
+
 # Laravel AdminLTE
 
 This is a ready to use AdminLTE template for Laravel 5.8
@@ -68,20 +99,3 @@ php artisan serve
 ````
 
 To get into the dashboard go to /register first.
-
-Info file .env
-DB_DATABASE=UAS-Kelompok3
-DB_USERNAME=root 
-DB_PASSWORD=
-
-Info User untuk login
-Email - Password (Sebelum diproses menjadi bcrpyt) - Role
-2172020@mahasiswa.com - 21212 - Mahasiswa
-2172034@mahasiswa.com - 34043 - Mahasiswa
-2172036@mahasiswa.com - 36360 - Mahasiswa
-2172039@mahasiswa.com - 39939 - Mahasiswa
-72001@prodi.com - 72127 - Prodi
-73001@prodi.com - 73137 - Prodi
-2173001@mahasiswa.com - 21731 - Mahasiswa
-2173002@mahasiswa.com - 21732 - Mahasiswa
-2173003@mahasiswa.com - 21733 - Mahasiswa
