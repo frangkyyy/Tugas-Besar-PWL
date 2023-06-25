@@ -14,4 +14,9 @@ class User extends Authenticatable
 
     public const CREATED_AT = 'created_at';
     public const UPDATED_AT = 'updated_at';
+
+    public function hasRole($role)
+    {
+        return $this->role === $role;
+    }
 }
