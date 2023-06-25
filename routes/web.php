@@ -11,6 +11,11 @@
 |
 */
 
+use App\Http\Controllers\dkbsController;
+use App\Http\Controllers\mktawar_Controller;
+use App\Http\Controllers\ProdiController;
+use App\Http\Controllers\UserController;
+
 Route::get('/', function() {
     return redirect(route('login'));
 });
@@ -24,9 +29,18 @@ Route::middleware('auth')->group(function() {
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 });
 
-Auth::routes();
+Route::get('edit_profile', [UserController::class, 'editProfile'])->name('editProfile');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('dkbs', [DKBSController::class, 'dkbs'])->name('dkbs');
 
-Route::get('/dashboard/profile/edit', [\App\Http\Controllers\ProfileController::class, 'edit'])->name('profile.edit');
-Route::post('/dashboard/profile/update', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
+Route::get('perwalian', [mktawar_Controller::class, 'mk_tawar'])->name('mk_tawar');
+
+# Route::get('/prodi/dashboard', [ProdiController::class, 'dashboard'])->name('prodi.dashboard');
+
+Route::get('/prodi/dkbsmahasiswa', [ProdiController::class, 'dkbsmahasiswa'])->name('prodi.dkbs');
+
+Route::get('/prodi/tawarmk', [ProdiController::class, 'tawarmk'])->name('prodi.tawarmk');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/prodi/dashboard', 'ProdiController@dashboard')->name('prodi.dashboard');
+});
