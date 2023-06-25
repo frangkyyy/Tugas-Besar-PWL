@@ -2,7 +2,9 @@
 
 namespace App\Http\Middleware;
 
+use Closure;
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
+use app\models\User;
 
 class Authenticate extends Middleware
 {
@@ -15,7 +17,15 @@ class Authenticate extends Middleware
     protected function redirectTo($request)
     {
         if (! $request->expectsJson()) {
-            return route('login');
+            if (auth()->check()) {
+                if (auth()->user()->hasRole('prodi')) {
+                    return route('admin.dashboard');
+                } else {
+                    return route('login');
+                }
+            } else {
+                return route('login');
+            }
         }
     }
 }
