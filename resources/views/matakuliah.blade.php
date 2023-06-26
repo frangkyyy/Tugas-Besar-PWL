@@ -24,18 +24,15 @@
         <div class="container-fluid">
 
             {{-- main content here --}}
-            @extends('layouts.master')
-
-            @section('content')
-                <table>
-                    <thead>
+            <table>
+                <thead>
                     <tr>
                         <th style="padding-left: 20px;">Nama Mata Kuliah</th>
                         <th style="padding-left: 30px;">Semester</th>
                         <th style="padding-left: 40px;">Jenis</th>
                     </tr>
-                    </thead>
-                    <tbody>
+                </thead>
+                <tbody>
                     @foreach ($matakuliah as $mk)
                         <tr>
                             <td style="padding-left: 20px;">{{ $mk->nama }}</td>
@@ -43,9 +40,8 @@
                             <td style="padding-left: 40px;">{{ $mk->jenis }}</td>
                         </tr>
                     @endforeach
-                    </tbody>
-                </table>
-            @endsection
+                </tbody>
+            </table>
 
         </div><!-- /.container-fluid -->
     </div>
