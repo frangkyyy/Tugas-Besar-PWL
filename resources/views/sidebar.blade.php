@@ -6,6 +6,7 @@
             style="opacity: .8">
         <span class="brand-text font-weight-light">{{config('app.name')}}</span>
     </a>
+
     <!-- Sidebar -->
     <div class="sidebar">
         @auth
@@ -15,10 +16,11 @@
                 <img src="{{asset('img/user-photo-default.png')}}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="{{route('editProfile')}}" class="d-block">{{Auth::user()->nama}}</a>
+                <a href="#" class="d-block">{{Auth::user()->name}}</a>
             </div>
         </div>
         @endauth
+
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -28,6 +30,14 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
+
+                <li class="nav-item">
+                    <a href="{{route('mata_kuliah')}}" class="nav-link">
+                        <i class="nav-icon fa fa-file-documents"></i>
+                        <p>Mata Kuliah</p>
+                    </a>
+                </li>
+
                 <li class="nav-item">
                     <form id="logout-form" action="{{route('logout')}}" method="post">
                         @csrf
