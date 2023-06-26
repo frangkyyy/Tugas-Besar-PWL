@@ -10,7 +10,7 @@
         </li>
     </ul>
 
-    {{-- <!-- SEARCH FORM -->
+     <!-- SEARCH FORM -->
     <form class="form-inline ml-3">
         <div class="input-group input-group-sm">
             <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
@@ -20,21 +20,21 @@
                 </button>
             </div>
         </div>
-    </form> --}}
+    </form>
 
-    {{-- <!-- Right navbar links -->
+     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-        <!-- Notifications Dropdown Menu -->
+        <!-- Profile Picture -->
         <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
-                <i class="fa fa-cog"></i>
+                <img src="{{ asset('img/user-photo-default.png') }}" alt="Profile Picture" class="img-circle elevation-2" style="width: 30px; height: 30px;">
             </a>
             <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                <a href="#" class="dropdown-item">Settings</a>
+                <a href="{{ route('updateProfile') }}" class="dropdown-item">Settings</a>
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item">Logout</a>
             </div>
         </li>
-    </ul> --}}
+    </ul>
 </nav>
 <!-- /.navbar -->
