@@ -15,11 +15,17 @@
 		<div class="form-group">
 			<label for="name">Nama</label>
 			<input type="text" name="name" id="name" value="{{ $user->name }}" class="form-control">
+			@error('name')
+            			<span class="text-danger">{{ $message }}</span>
+       	 		@enderror
 		</div>
 
 		<div class="form-group">
 			<label for="email">Email</label>
 			<input type="email" name="email" id="email" value="{{ $user->email }}" class="form-control">
+			@error('email')
+            			<span class="text-danger">{{ $message }}</span>
+        		@enderror
 		</div>
 
 		<!-- tambahkan input form untuk atribut-atribut lainnya sesuai kebutuhan -->
