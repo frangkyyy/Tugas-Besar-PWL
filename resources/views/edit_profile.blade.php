@@ -27,6 +27,32 @@
                 <form action="{{ route('updateProfile') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <tr>
+                        <td><strong>Name</strong></td>
+                        <td>: {{ Auth::user()->nama }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ID</strong></td>
+                        <td>: {{ Auth::user()->id }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Email</strong></td>
+                        <td>: {{ Auth::user()->email }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Role</strong></td>
+                        <td>: {{ Auth::user()->role }}</td>
+                    </tr>
+{{--                    <tr>--}}
+{{--                        <td><strong>Program Studi:</strong></td>--}}
+{{--                        <td>--}}
+{{--                            @if(Auth::user()->program_studi === 72)--}}
+{{--                                Teknik Informatika--}}
+{{--                            @elseif(Auth::user()->program_studi === 73)--}}
+{{--                                Sistem Informasi--}}
+{{--                            @endif--}}
+{{--                        </td>--}}
+{{--                    </tr>--}}
+                    <tr>
                         <td><label for="photo">Photo</label></td>
                         <td>:<input type="file" name="photo" accept="image/*"></td>
                     </tr>
