@@ -11,7 +11,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Dashboard</a></li>
-                        <li class="breadcrumb-item active">Starter</li>
+                        <li class="breadcrumb-item active">Edit Profile</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -23,21 +23,31 @@
     <div class="content">
         <div class="container-fluid">
 
-            {{-- main content here --}}
-            <form action="{{ route('updateProfile') }}" method="POST" enctype="multipart/form-data">
-                @csrf
-                <label for="photo">Photo:</label>
-                <input type="file" name="photo" accept="image/*">
-                <br>
-                <label for="alamat">Address:</label>
-                <input type="text" name="alamat" value="{{ $user->alamat }}">
-                <br>
-                <label for="nohp">Phone Number:</label>
-                <input type="text" name="nohp" value="{{ $user->nohp }}">
-                <button type="submit">Update Profile</button>
-            </form>
+            <table>
+                <form action="{{ route('updateProfile') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <tr>
+                        <td><label for="photo">Photo</label></td>
+                        <td>:<input type="file" name="photo" accept="image/*"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="alamat">Address</label></td>
+                        <td>:<input type="text" name="alamat" value="{{ $user->alamat }}"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="nohp">Phone Number</label></td>
+                        <td>:<input type="text" name="nohp" value="{{ $user->nohp }}"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button type="submit" style="margin-top: 10px; background-color: #4caf50; color: white; padding: 10px 20px; border: none; border-radius: 4px;">Update Profile</button>
+                        </td>
+                    </tr>
+                </form>
+            </table>
 
         </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
+
 @endsection
