@@ -6,12 +6,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Starter</h1>
+                    <h1 class="m-0 text-dark">Dokumen Kontrak Beban Studi</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Dashboard</a></li>
-                        <li class="breadcrumb-item active">Starter</li>
+                        <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
+                        <li class="breadcrumb-item active">DKBS</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -24,6 +24,32 @@
         <div class="container-fluid">
 
             {{-- main content here --}}
+            <div class="card">
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th style="padding-left: 3px;">KODE MK</th>
+                            <th style="padding-left: 3px;">MATA KULIAH</th>
+                            <th style="padding-left: 100px;">SKS</th>
+                            <th style="padding-left: 3px;">KELAS</th>
+                            <th style="padding-left: 3px;">HARI</th>
+                            <th style="padding-left: 3px;">WAKTU</th>
+                            <th style="padding-left: 3px;">RUANG</th>
+                        </tr>
+                        </thead>
+{{--                        <tbody>--}}
+{{--                        @foreach ($matakuliah as $mk)--}}
+{{--                            <tr>--}}
+{{--                                <td style="padding-left: 10px;">{{ $mk->nama }}</td>--}}
+{{--                                <td style="padding-left: 10px;">{{ $mk->mata_kuliah }}</td>--}}
+{{--                                <td style="padding-left: 100px;">{{ $mk->sks }}</td>--}}
+{{--                            </tr>--}}
+{{--                        @endforeach--}}
+{{--                        </tbody>--}}
+                    </table>
+                </div>
+            </div>
 
         </div><!-- /.container-fluid -->
     </div>
