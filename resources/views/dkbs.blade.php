@@ -39,11 +39,11 @@
                         </tr>
                         </thead>
 {{--                        <tbody>--}}
-{{--                        @foreach ($matakuliah as $mk)--}}
+{{--                        @foreach ($matkul as $matkul)--}}
 {{--                            <tr>--}}
-{{--                                <td style="padding-left: 10px;">{{ $mk->nama }}</td>--}}
-{{--                                <td style="padding-left: 10px;">{{ $mk->mata_kuliah }}</td>--}}
-{{--                                <td style="padding-left: 100px;">{{ $mk->sks }}</td>--}}
+{{--                                <td>{{ $matkul->id }}</td>--}}
+{{--                                <td>{{ $matkul->nama }}</td>--}}
+{{--                                <td>{{ $matkul->sks }}</td>--}}
 {{--                            </tr>--}}
 {{--                        @endforeach--}}
 {{--                        </tbody>--}}
