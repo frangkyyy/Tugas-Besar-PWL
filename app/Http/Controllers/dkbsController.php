@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class dkbsController extends Controller
 {
-    public static function index()
+    public static function dkbs()
     {
         $periods = [
             'Reguler Ganjil 2021/2022',
@@ -16,6 +16,6 @@ class dkbsController extends Controller
             'Reguler Genap 2022/2023',
         ];
 
-        return view('education.periods')->with('periods', $periods);
+        return view('education_periods')->with('periods', $periods);
     }
 }
