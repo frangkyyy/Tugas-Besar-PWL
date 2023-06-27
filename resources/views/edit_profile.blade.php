@@ -31,7 +31,7 @@
                         <td>: {{ Auth::user()->nama }}</td>
                     </tr>
                     <tr>
-                        <td><strong>ID</strong></td>
+                        <td><strong>NRP</strong></td>
                         <td>: {{ Auth::user()->id }}</td>
                     </tr>
                     <tr>
