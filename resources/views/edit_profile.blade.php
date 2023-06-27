@@ -58,11 +58,11 @@
                     </tr>
                     <tr>
                         <td><label for="alamat">Address</label></td>
-                        <td>:<input type="text" name="alamat" value="{{ $user->alamat }}"></td>
+                        <td>:<input type="text" name="alamat" id="alamat" value="{{ $user->alamat }}" required></td>
                     </tr>
                     <tr>
                         <td><label for="nohp">Phone Number</label></td>
-                        <td>:<input type="text" name="nohp" value="{{ $user->nohp }}"></td>
+                        <td>:<input type="text" name="nohp" id="nohp" value="{{ $user->nohp }}" required></td>
                     </tr>
                     <tr>
                         <td colspan="2">
